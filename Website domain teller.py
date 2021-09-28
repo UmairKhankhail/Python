@@ -1,9 +1,10 @@
-def findDog(string):
-   listo=list(string.split(' '))
-   for i in listo:
-        if i=='dog':
-            return True
-   else:
-            return False
-
-print(findDog('Is there any dog here?'))
+def domainGet(name):
+    listo=list(name)
+    a=listo.index('@')
+    empty_list=[]
+    for i in range(len(listo)):
+        if(i>a):
+            empty_list.append(listo[i])
+    combined_list=''.join(empty_list)
+    print(combined_list)
+print(domainGet('Umair@domain.com'))
